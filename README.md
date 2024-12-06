@@ -6,16 +6,16 @@
 [![npm-downloads][npm-downloads.svg]][npm.link]
 [![npm-version][npm-version.svg]][npm.link]
 
-[ci.svg]: https://github.com/catdad-experiments/heic-convert/actions/workflows/ci.yml/badge.svg
-[ci.link]: https://github.com/catdad-experiments/heic-convert/actions/workflows/ci.yml
-[npm-downloads.svg]: https://img.shields.io/npm/dm/heic-convert.svg
-[npm.link]: https://www.npmjs.com/package/heic-convert
-[npm-version.svg]: https://img.shields.io/npm/v/heic-convert.svg
+[ci.svg]: https://github.com/qs-coder/heic-convert/actions/workflows/ci.yml/badge.svg
+[ci.link]: https://github.com/qs-coder/heic-convert/actions/workflows/ci.yml
+[npm-downloads.svg]: https://img.shields.io/npm/dm/@qs-coder/heic-convert.svg
+[npm.link]: https://www.npmjs.com/package/@qs-coder/heic-convert
+[npm-version.svg]: https://img.shields.io/npm/v/@qs-coder/heic-convert.svg
 
 ## Install
 
 ```bash
-npm install heic-convert
+npm install @qs-coder/heic-convert
 ```
 
 ## Usage
@@ -35,7 +35,7 @@ Convert the main image in a HEIC to JPEG
 ```javascript
 const { promisify } = require('util');
 const fs = require('fs');
-const convert = require('heic-convert');
+const convert = require('@qs-coder/heic-convert');
 
 (async () => {
   const inputBuffer = await promisify(fs.readFile)('/path/to/my/image.heic');
@@ -54,7 +54,7 @@ Convert the main image in a HEIC to PNG
 ```javascript
 const { promisify } = require('util');
 const fs = require('fs');
-const convert = require('heic-convert');
+const convert = require('@qs-coder/heic-convert');
 
 (async () => {
   const inputBuffer = await promisify(fs.readFile)('/path/to/my/image.heic');
@@ -72,7 +72,7 @@ Convert all images in a HEIC
 ```javascript
 const { promisify } = require('util');
 const fs = require('fs');
-const convert = require('heic-convert');
+const convert = require('@qs-coder/heic-convert');
 
 (async () => {
   const inputBuffer = await promisify(fs.readFile)('/path/to/my/image.heic');
@@ -95,18 +95,18 @@ _Note that while the converter returns a Promise and is overall asynchronous, a 
 
 ## Usage in the browser
 
-While the NodeJS version of `heic-convert` may be compiled for use in the browser with something like `webpack`, [not all build tools necessarily like to compile all modules well](https://github.com/catdad-experiments/heic-convert/issues/29). However, what further complicates things is that this module uses pure-javascript implementations of a jpeg and png encoder. But the browser has its own native encoders! Let's just use those instead of including a ton of extra code in your bundle.
+While the NodeJS version of `heic-convert` may be compiled for use in the browser with something like `webpack`, [not all build tools necessarily like to compile all modules well](https://github.com/qs-coder/heic-convert/issues/29). However, what further complicates things is that this module uses pure-javascript implementations of a jpeg and png encoder. But the browser has its own native encoders! Let's just use those instead of including a ton of extra code in your bundle.
 
 When compiling a client-side project, use:
 
 ```javascript
-const convert = require('heic-convert/browser');
+const convert = require('@qs-coder/heic-convert/browser');
 ```
 
 This is currently only supported in the main thread. Support for workers may be added in the future, but if you need it sooner, please create an issue or even a PR!
 
 ## Related
 
-* [heic-cli](https://github.com/catdad-experiments/heic-cli) - convert heic/heif images to jpeg or png from the command line
-* [heic-decode](https://github.com/catdad-experiments/heic-decode) - decode heic images to raw image data
-* [libheif-js](https://github.com/catdad-experiments/libheif-js) - libheif as a pure-javascript npm module
+* [heic-cli](https://github.com/qs-coder/heic-cli) - convert heic/heif images to jpeg or png from the command line
+* [heic-decode](https://github.com/qs-coder/heic-decode) - decode heic images to raw image data
+* [libheif-js](https://github.com/qs-coder/libheif-js) - libheif as a pure-javascript npm module
