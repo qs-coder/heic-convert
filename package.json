@@ -1,6 +1,6 @@
 {
   "name": "@qs-coder/heic-convert",
-  "version": "2.1.1",
+  "version": "2.3.0",
   "description": "Convert HEIC/HEIF images to JPEG and PNG",
   "main": "index.js",
   "scripts": {
@@ -40,7 +40,7 @@
     "rootrequire": "^1.0.0"
   },
   "dependencies": {
-    "@qs-coder/heic-decode": "^2.0.0",
+    "@qs-coder/heic-decode": "^2.1.0",
     "jpeg-js": "^0.4.4",
     "pngjs": "^6.0.0"
   },
